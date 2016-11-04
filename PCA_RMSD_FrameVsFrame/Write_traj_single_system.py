@@ -66,7 +66,6 @@ nSteps = 0
 with MDAnalysis.Writer('%s' %(out), nAtoms) as W:
 
 	while start <= end:
-		ffprint('Beginning to analyzing trajectory %02d.' %(start))
 		u.load_new('%s/production.%s/production.%s.dcd' %(traj_loc,start,start))
 		nFrames = len(u.trajectory)
 		nSteps += nFrames
